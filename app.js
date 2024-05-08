@@ -32,7 +32,7 @@ bot.on('guildDelete', (guild) => { // If the Bot was removed on a server, procee
 bot.on('message', (message) => {
     if (message.channel.type === "dm" || message.author.bot || message.author === bot.user) return; // Checks if we're on DMs, or the Author is a Bot, or the Author is our Bot, stop.
     var args = message.content.split(' ').slice(1); // We need this later
-    var command = message.content.split(' ')[0].replace(guildConf[message.guild.id].prefix, ''); // Replaces the Current Prefix with this
+    var command = message.content.split(' ')[0].replace(guildConf[message.guild.id].prefix, ','); // Replaces the Current Prefix with this
 
     if (command === "ping") { // If your command is <prefix>ping, proceed
 	message.channel.send('pong!') // Reply pong!
@@ -48,4 +48,4 @@ bot.on('message', (message) => {
   }
 });
 
-bot.login(config.token);
+bot.login(config.token);1081132292149366846
